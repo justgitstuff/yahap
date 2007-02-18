@@ -4,7 +4,9 @@
 
 Current Iteration is *0*, yes baby steps first
 
-The purpose of this page is to put together a big wish list and assign priorites. Then get focus by concentrating on one iteration at a time. As I think up stuff I place it in the feature bucket. As an iteration ends I move stories from the bucket into the next iteration
+The purpose of this page is to put together a big wish list and assign priorites. Then get focus by concentrating on one iteration at a time. As I think up stuff I place it in the feature bucket. As an iteration ends I move stories from the bucket into the next iteration.
+
+For definitions on this page see the YahapArchitecture page
 
 = Iterations =
 == Iteration 0 ==
@@ -19,7 +21,7 @@ The purpose of this page is to put together a big wish list and assign priorites
  * and the add device page
 
 == Iteration 1 ==
-*Story1:* List devices 
+*Story:* List devices web page
  * Show data table with sortable columns
  * Fields on table should be:
   * Status
@@ -30,8 +32,7 @@ The purpose of this page is to put together a big wish list and assign priorites
   * Last Changed
   * Control (on/off) buttons
 
-
-*Story2:* Turn on and off a light from the web interface
+*Story:* Turn on and off a light from the web interface using x-10
  * User clicks on Add device button
  * Shown a form with the following fields
   * Device Name
@@ -40,6 +41,12 @@ The purpose of this page is to put together a big wish list and assign priorites
   * Housecode/unitcode
   * Options - only 1 option to not log commands
   * Save/Delete/Cancel
-  
+ * User clicks on Save button
+ * Add Device web service called (need to define wsdl)
+ * Model adds device to db using hibernate
+
 
 = Feature Bucket =
+*Story:* Clicking on a device should show you the last 5 events
+Location: Webapp: ListDevicesPage
+ * Clicking anywhere in the table should show you another row in the table in a different colour a list of the last 5 events
