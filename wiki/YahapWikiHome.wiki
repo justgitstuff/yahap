@@ -4,10 +4,16 @@
 
 A project attempting to control web cams and x-10 devices through a web gui.
 
-= Purpose of this project =
+= Why another Home Automation Project? =
+I've failed to find a project that fulfils the following requirements.
+ * Is open source
+ * Is written in Java
+ * Is simple to use (homeseer like)
+ * Uses current Java technologies:
+  * JSF (or spring mvc) for web pages
+  * Web services for exposing functionality
+  * Maven for builds
+  * Hibernate for database access, etc etc
+ * and this is rather specific but I want it to work with my media center too!! so i need a media center plugin
 
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+HaInvestigations
