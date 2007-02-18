@@ -1,4 +1,4 @@
-#This project is not working yet.
+#summary Please don't download it, it doesn't work yet
 
 = Introduction =
 
