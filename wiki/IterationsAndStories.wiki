@@ -1,0 +1,16 @@
+#summary A list of features and their prioritites
+
+= Iterations and Stories =
+
+Current Iteration is *0*, yes baby steps first
+
+= Iterations =
+The purpose of this page is to put together a big wish list and assign priorites. Then concentrating on one iteration at a time.
+
+== Iteration 0 ==
+Story1: setup the project environment
+  * Set up maven and project layout
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
+
+= Feature Bucket =
