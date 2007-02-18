@@ -11,14 +11,25 @@ The purpose of this page is to put together a big wish list and assign priorites
 *Story1:* setup the project environment
  * Set up maven and project layout
  * Set up axis to run within tomcat
+ * Install HSQLDB
+
 *Story2:* do some web page mockups
  * Use jsf/myfaces components to build skeleton pages
  * do the list devices page (with state such as on/off)
  * and the add device page
+
 == Iteration 1 ==
 *Story1:* List devices 
- * 
- * 
+ * Show data table with sortable columns
+ * Fields on table should be:
+  * Status
+  * Location
+  * Name
+  * Code
+  * Type
+  * Last Changed
+  * Control (on/off) buttons
+
 
 *Story2:* Turn on and off a light from the web interface
  * User clicks on Add device button
