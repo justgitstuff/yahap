@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#summary rambling research into HA software and hardware
 
 = Home Automation Software and Technologies Investigations =
 
