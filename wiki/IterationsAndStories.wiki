@@ -46,7 +46,12 @@ For definitions on this page see the YahapArchitecture page
  * Model adds device to db using hibernate
 
 
-= Feature Bucket =
+= Story Bucket =
 *Story:* Clicking on a device should show you the last 5 events
 Location: Webapp: ListDevicesPage
  * Clicking anywhere in the table should show you another row in the table in a different colour a list of the last 5 events
+
+*Story:* yahap-webapp: Able to navigate easily through pages
+ * Implement tobago tabbing
+ * implement tobago layout
+
