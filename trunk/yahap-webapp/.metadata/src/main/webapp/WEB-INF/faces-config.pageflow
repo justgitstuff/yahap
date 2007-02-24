@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf11720678589660" configfile="/yahap-webapp/src/main/webapp/WEB-INF/faces-config.xml">
-  <nodes xsi:type="pageflow:PFPage" name="login" x="122" y="178" id="pf11721376921070" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf11721376921071" path="/login.jsp"/>
-  <nodes xsi:type="pageflow:PFPage" name="welcome" x="338" y="178" id="pf11721376921072" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" path="/welcome.jsp"/>
-  <nodes xsi:type="pageflow:PFPage" name="listdevices" x="246" y="264" id="pf11721376921073" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf11721376921071" path="/listdevices.jsp"/>
-  <links id="pf11721376921071" target="pf11721376921073" source="pf11721376921070" outcome="login"/>
-</pageflow:Pageflow>
