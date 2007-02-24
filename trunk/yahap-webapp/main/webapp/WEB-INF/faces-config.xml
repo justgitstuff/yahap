@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE faces-config PUBLIC
+    "-//Sun Microsystems, Inc.//DTD JavaServer Faces Config 1.1//EN"
+    "http://java.sun.com/dtd/web-facesconfig_1_1.dtd">
+
+<faces-config>
+	<managed-bean>
+		<managed-bean-name>
+		loginBean</managed-bean-name>
+		<managed-bean-class>
+		com.tutorial.LoginBean</managed-bean-class>
+		<managed-bean-scope>
+		session</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<description>
+		Backing bean for devices.jsp</description>
+		<managed-bean-name>
+		listdevices_backing</managed-bean-name>
+		<managed-bean-class>
+		au.net.ohalloran.backing.ListDevices</managed-bean-class>
+		<managed-bean-scope>
+		request</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<description>
+		delete this</description>
+		<managed-bean-name>
+		testBean_backing</managed-bean-name>
+		<managed-bean-class>
+		au.net.ohalloran.backing.TestBean</managed-bean-class>
+		<managed-bean-scope>
+		request</managed-bean-scope>
+	</managed-bean>
+	<navigation-rule>
+		<display-name>
+		login</display-name>
+		<from-view-id>
+		/login.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>
+			login</from-outcome>
+			<to-view-id>
+			/listdevices.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<validator>
+		<display-name>
+		Validate Password</display-name>
+		<validator-id>
+		com.tutorial.ValidatePassword</validator-id>
+		<validator-class>
+		com.tutorial.ValidatePassword</validator-class>
+	</validator>
+
+</faces-config>
