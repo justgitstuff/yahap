@@ -4,6 +4,10 @@
 <%@ taglib tagdir="/WEB-INF/tags/layout" prefix="layout"%>
 <%@ taglib uri="http://myfaces.apache.org/tobago/extension" prefix="tx"%>
 <f:view>
+      <f:facet name="reload">
+        <tc:reload frequency="5000" />
+      </f:facet>
+
 	<tc:loadBundle basename="webapp" var="appBundle" />
 	<tc:page>
 		<f:facet name="layout">
@@ -23,14 +27,19 @@
 					label="#{appBundle.addDevice_nameLabel}"
 					tip="#{appBundle.addDevice_nameLabel_tip}"
 					suggestMethod="#{addDevice_backing.getInputSuggestItems}" />
-
-				<tc:selectOneChoice
+				<tx:selectOneChoice
 					label="#{appBundle.addDevice_locationLabel}"
 					tip="#{appBundle.addDevice_locationLabel_tip}"
-					value="#{yahapController.locationValue}">
-					<f:selectItems value="#{yahapController.locations}" />
-				</tc:selectOneChoice>
+					value="#{locations.locationValue}">
+					<f:selectItems value="#{locations.locations}" />
+				</tx:selectOneChoice>
 
+				<tx:selectOneChoice
+					label="#{appBundle.addDevice_typeLabel}"
+					tip="#{appBundle.addDevice_typeLabel_tip}"
+					value="#{locations.locationValue}">
+					<f:selectItems value="#{locations.locations}" />
+				</tx:selectOneChoice>
 
 				<tc:button id="button" action="helloWorld"
 					actionListener="#{addDevice_backing.click}"
