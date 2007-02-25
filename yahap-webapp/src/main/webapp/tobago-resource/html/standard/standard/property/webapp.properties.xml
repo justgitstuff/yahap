@@ -20,10 +20,19 @@
   <entry key="addDevice_locationLabel">Location</entry>
   <entry key="addDevice_locationLabel_tip">Choose which room this device is located in</entry>
 
+  <entry key="addDevice_typeLabel">Device Type</entry>
+  <entry key="addDevice_typeLabel_tip">Choose a category for this device</entry>
+
 <!-- location list -->
   <entry key="location_itemUnknown">none</entry>
   <entry key="location_itemPorch">Porch</entry>
   <entry key="location_itemLivingRoom">Living Room</entry>
+
+<!-- type list -->
+  <entry key="deviceType_Lamp">Desk Lamp</entry>
+  <entry key="deviceType_MotionSensor">Motion Sensor</entry>
+  <entry key="deviceType_AM466">AM466 (Appliance Module)</entry>
+  <entry key="deviceType_ApplianceModule">Appliance Module</entry>
 
 <!-- menu -->
   <entry key="menu_navigate">_Navigation</entry>
