@@ -37,11 +37,21 @@
 	</managed-bean>
 	<managed-bean>
 		<description>
-		Common functions used by pages</description>
+		session bean for getting location information</description>
 		<managed-bean-name>
-		yahapController</managed-bean-name>
+		locations</managed-bean-name>
 		<managed-bean-class>
-		au.net.ohalloran.controller.YahapController</managed-bean-class>
+		au.net.ohalloran.model.impl.Locations_impl</managed-bean-class>
+		<managed-bean-scope>
+		session</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<description>
+		session device types bean</description>
+		<managed-bean-name>
+		deviceTypes</managed-bean-name>
+		<managed-bean-class>
+		au.net.ohalloran.model.impl.DeviceTypes_impl</managed-bean-class>
 		<managed-bean-scope>
 		session</managed-bean-scope>
 	</managed-bean>
