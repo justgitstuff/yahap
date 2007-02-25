@@ -6,14 +6,6 @@
 
 <faces-config>
 	<managed-bean>
-		<managed-bean-name>
-		loginBean</managed-bean-name>
-		<managed-bean-class>
-		com.tutorial.LoginBean</managed-bean-class>
-		<managed-bean-scope>
-		session</managed-bean-scope>
-	</managed-bean>
-	<managed-bean>
 		<description>
 		Backing bean for devices.jsp</description>
 		<managed-bean-name>
@@ -32,6 +24,26 @@
 		au.net.ohalloran.backing.TestBean</managed-bean-class>
 		<managed-bean-scope>
 		request</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<description>
+		Backing bean for adddevice.jsp page</description>
+		<managed-bean-name>
+		addDevice_backing</managed-bean-name>
+		<managed-bean-class>
+		au.net.ohalloran.backing.AddDevice</managed-bean-class>
+		<managed-bean-scope>
+		request</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<description>
+		Common functions used by pages</description>
+		<managed-bean-name>
+		yahapController</managed-bean-name>
+		<managed-bean-class>
+		au.net.ohalloran.controller.YahapController</managed-bean-class>
+		<managed-bean-scope>
+		session</managed-bean-scope>
 	</managed-bean>
 	<navigation-rule>
 		<display-name>

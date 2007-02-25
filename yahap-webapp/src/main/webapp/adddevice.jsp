@@ -1,18 +1,42 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib uri="http://myfaces.apache.org/tobago/component" prefix="tc"%>
 <%@ taglib uri="http://java.sun.com/jsf/core" prefix="f"%>
-<%@ taglib uri="http://java.sun.com/jsf/html" prefix="h"%>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
-</head>
+<%@ page contentType="text/html;charset=UTF-8" language="java"%>
+<%@ taglib tagdir="/WEB-INF/tags/layout" prefix="layout"%>
+<%@ taglib uri="http://myfaces.apache.org/tobago/extension" prefix="tx"%>
 <f:view>
-<body>
-	<h:form>
+	<tc:loadBundle basename="webapp" var="appBundle" />
+	<tc:page>
+		<f:facet name="layout">
+			<tc:gridLayout />
+		</f:facet>
 
-	</h:form>
-</body>
+		<tc:box label="#{appBundle.addDevice_boxTitle}">
+			<f:facet name="layout">
+				<tc:gridLayout border="0" />
+			</f:facet>
+
+			<tc:panel>
+				<f:facet name="layout">
+					<tc:gridLayout border="0" />
+				</f:facet>
+				<tx:in value="#{addDevice_backing.deviceName}" required="true"
+					label="#{appBundle.addDevice_nameLabel}"
+					tip="#{appBundle.addDevice_nameLabel_tip}"
+					suggestMethod="#{addDevice_backing.getInputSuggestItems}" />
+
+				<tc:selectOneChoice
+					label="#{appBundle.addDevice_locationLabel}"
+					tip="#{appBundle.addDevice_locationLabel_tip}"
+					value="#{yahapController.locationValue}">
+					<f:selectItems value="#{yahapController.locations}" />
+				</tc:selectOneChoice>
+
+
+				<tc:button id="button" action="helloWorld"
+					actionListener="#{addDevice_backing.click}"
+					label="#{appBundle.addDevice_buttonAction}" />
+
+			</tc:panel>
+		</tc:box>
+	</tc:page>
 </f:view>
-</html>

@@ -33,9 +33,9 @@
 			</f:facet>
 
 			<tc:panel>
-				<f:facet name="layout">
-					<tc:gridLayout />
-				</f:facet>
+			<f:facet name="layout">
+				<tc:gridLayout columns="1*;1*" border="0" />
+			</f:facet>
 				<tx:in value="#{testBean_backing.basicInput}" required="true"
 					label="#{devicesBundle.basic_textboxLabel}" tip="test"
 					suggestMethod="#{testBean_backing.getInputSuggestItems}" />
@@ -48,7 +48,7 @@
 					value="#{testBean_backing.basicTime}" />
 				<tc:button id="button" action="helloWorld"
 					actionListener="#{testBean_backing.click}"
-					label="#{devicesBundle.basic_buttonAction}" />
+					label="#{devicesBundle.addDevice_buttonAction}" />
 
 			</tc:panel>
 		</tc:box>
