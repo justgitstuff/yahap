@@ -23,6 +23,12 @@
   <entry key="addDevice_typeLabel">Device Type</entry>
   <entry key="addDevice_typeLabel_tip">Choose a category for this device</entry>
 
+  <entry key="addDevice_houseCodeLabel">Housecode/Unitcode</entry>
+  <entry key="addDevice_houseCodeLabel_tip">Enter the unique identifier for this device</entry>
+
+  <entry key="addDeviceConfirm_BoxTitle">Confirm New Device</entry>
+  <entry key="addDeviceConfirm_ButtonAction">Confirm and Add</entry>
+
 <!-- location list -->
   <entry key="location_itemUnknown">none</entry>
   <entry key="location_itemPorch">Porch</entry>
