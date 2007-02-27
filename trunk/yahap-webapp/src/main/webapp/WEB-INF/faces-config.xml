@@ -41,9 +41,23 @@
 		<managed-bean-name>
 		locations</managed-bean-name>
 		<managed-bean-class>
-		au.net.ohalloran.model.impl.Locations_impl</managed-bean-class>
+		au.net.ohalloran.model.Locations</managed-bean-class>
 		<managed-bean-scope>
 		session</managed-bean-scope>
+		<map-entries>
+			<map-entry>
+				<key>
+				porch</key>
+				<value>
+				Porch</value>
+			</map-entry>
+			<map-entry>
+				<key>
+				lounge</key>
+				<value>
+				Lounge Room</value>
+			</map-entry>
+		</map-entries>
 	</managed-bean>
 	<managed-bean>
 		<description>
@@ -51,9 +65,23 @@
 		<managed-bean-name>
 		deviceTypes</managed-bean-name>
 		<managed-bean-class>
-		au.net.ohalloran.model.impl.DeviceTypes_impl</managed-bean-class>
+		au.net.ohalloran.model.DeviceTypes</managed-bean-class>
 		<managed-bean-scope>
 		session</managed-bean-scope>
+		<map-entries>
+			<map-entry>
+				<key>
+				deskLamp</key>
+				<value>
+				Desk Lamp</value>
+			</map-entry>
+			<map-entry>
+				<key>
+				motionSensor</key>
+				<value>
+				Motion Sensor</value>
+			</map-entry>
+		</map-entries>
 	</managed-bean>
 	<navigation-rule>
 		<display-name>
@@ -67,13 +95,29 @@
 			/listdevices.jsp</to-view-id>
 		</navigation-case>
 	</navigation-rule>
-	<validator>
+	<navigation-rule>
 		<display-name>
-		Validate Password</display-name>
-		<validator-id>
-		com.tutorial.ValidatePassword</validator-id>
-		<validator-class>
-		com.tutorial.ValidatePassword</validator-class>
-	</validator>
+		adddevice</display-name>
+		<from-view-id>
+		/adddevice.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>
+			deviceSummary</from-outcome>
+			<to-view-id>/adddeviceconfirm.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>
+		adddeviceconfirm</display-name>
+		<from-view-id>
+		/adddeviceconfirm.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>
+			revise</from-outcome>
+			<to-view-id>
+			/adddevice.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
 
 </faces-config>
