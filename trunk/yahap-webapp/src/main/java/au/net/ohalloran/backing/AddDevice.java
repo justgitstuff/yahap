@@ -1,17 +1,19 @@
 package au.net.ohalloran.backing;
 
-import javax.faces.event.ActionEvent;
-
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import au.net.ohalloran.model.impl.Locations_impl;
+import au.net.ohalloran.model.impl.DeviceTypeEnum;
 
 public class AddDevice {
 
-	  private static final Log LOG = LogFactory.getLog(AddDevice.class);
+	private static final Log LOG = LogFactory.getLog(AddDevice.class);
 
+	private String locationValue="";
 	private String deviceName="";
+	private String houseCode="";
+	private String unitCode="";
+	private String deviceType="";
 
 	public String getDeviceName() {
 		return deviceName;
@@ -20,10 +22,35 @@ public class AddDevice {
 	public void setDeviceName(String deviceName) {
 		this.deviceName = deviceName;
 	}
-	
-    public void click(ActionEvent actionEvent) {
-    	if (LOG.isDebugEnabled()){LOG.debug("add device button clicked");}
-        actionEvent.getComponent().getId();
-      }
+	public String getDeviceType() {
+		return deviceType;
+	}
+	public void setDeviceType(String deviceType) {
+		this.deviceType = deviceType;
+	}
+	public String getHouseCode() {
+		return houseCode;
+	}
+	public void setHouseCode(String houseCode) {
+		this.houseCode = houseCode;
+	}
+	public String getUnitCode() {
+		return unitCode;
+	}
+	public void setUnitCode(String unitCode) {
+		this.unitCode = unitCode;
+	}
+	public String getLocationValue() {
+		return locationValue;
+	}
+	public void setLocationValue(String locationValue) {
+		this.locationValue = locationValue;
+	}
 
+	public String addDevice() {
+		// This method would call a database or other service and add the
+		// confirmed user information.
+		System.out.println("Adding device");
+		return "success";
+	}
 }
