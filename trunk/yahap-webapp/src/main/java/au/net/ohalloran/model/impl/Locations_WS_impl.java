@@ -8,8 +8,10 @@ import org.apache.commons.logging.LogFactory;
 import org.apache.myfaces.tobago.context.ResourceManager;
 import org.apache.myfaces.tobago.context.ResourceManagerFactory;
 
+import au.net.ohalloran.model.IUpdateMap;
 
-public class Locations_WS_impl {
+
+public class Locations_WS_impl implements IUpdateMap {
 
 	private LocationEnum locationValue;
 
@@ -50,6 +52,10 @@ public class Locations_WS_impl {
 
 	public void setLocationValue(LocationEnum locationValue) {
 		this.locationValue = locationValue;
+	}
+
+	public void doUpdate() {
+		
 	}
 
 }
