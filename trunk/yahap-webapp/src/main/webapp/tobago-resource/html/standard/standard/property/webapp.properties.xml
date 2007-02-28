@@ -26,8 +26,9 @@
   <entry key="addDevice_houseCodeLabel">Housecode/Unitcode</entry>
   <entry key="addDevice_houseCodeLabel_tip">Enter the unique identifier for this device</entry>
 
-  <entry key="addDeviceConfirm_BoxTitle">Confirm New Device</entry>
-  <entry key="addDeviceConfirm_ButtonAction">Confirm and Add</entry>
+  <entry key="addDeviceConfirm_boxTitle">Confirm New Device</entry>
+  <entry key="addDeviceConfirm_confirm">Confirm and Add</entry>
+  <entry key="addDeviceConfirm_revise">Edit Device</entry>
 
 <!-- location list -->
   <entry key="location_itemUnknown">none</entry>
