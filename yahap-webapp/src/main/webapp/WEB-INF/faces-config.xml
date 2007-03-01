@@ -11,7 +11,7 @@
 		<managed-bean-name>
 		listdevices_backing</managed-bean-name>
 		<managed-bean-class>
-		au.net.ohalloran.backing.ListDevices</managed-bean-class>
+		au.net.ohalloran.yahap.webapp.backing.ListDevices</managed-bean-class>
 		<managed-bean-scope>
 		request</managed-bean-scope>
 	</managed-bean>
@@ -21,7 +21,7 @@
 		<managed-bean-name>
 		testBean_backing</managed-bean-name>
 		<managed-bean-class>
-		au.net.ohalloran.backing.TestBean</managed-bean-class>
+		au.net.ohalloran.yahap.webapp.backing.TestBean</managed-bean-class>
 		<managed-bean-scope>
 		request</managed-bean-scope>
 	</managed-bean>
@@ -31,7 +31,7 @@
 		<managed-bean-name>
 		addDevice_backing</managed-bean-name>
 		<managed-bean-class>
-		au.net.ohalloran.backing.AddDevice</managed-bean-class>
+		au.net.ohalloran.yahap.webapp.backing.AddDevice</managed-bean-class>
 		<managed-bean-scope>
 		request</managed-bean-scope>
 	</managed-bean>
@@ -41,7 +41,7 @@
 		<managed-bean-name>
 		locations</managed-bean-name>
 		<managed-bean-class>
-		au.net.ohalloran.model.Locations</managed-bean-class>
+		au.net.ohalloran.yahap.webapp.model.Locations</managed-bean-class>
 		<managed-bean-scope>
 		session</managed-bean-scope>
 		<map-entries>
@@ -65,7 +65,7 @@
 		<managed-bean-name>
 		deviceTypes</managed-bean-name>
 		<managed-bean-class>
-		au.net.ohalloran.model.DeviceTypes</managed-bean-class>
+		au.net.ohalloran.yahap.webapp.model.Locations</managed-bean-class>
 		<managed-bean-scope>
 		session</managed-bean-scope>
 		<map-entries>
@@ -128,6 +128,18 @@
 			<from-outcome>success</from-outcome>
 			<to-view-id>
 			/listdevices.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>
+		listdevices</display-name>
+		<from-view-id>
+		/listdevices.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>
+			adddevice</from-outcome>
+			<to-view-id>
+			/adddevice.jsp</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 

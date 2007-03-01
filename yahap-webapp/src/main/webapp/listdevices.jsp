@@ -1,19 +1,27 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib uri="http://myfaces.apache.org/tobago/component" prefix="tc"%>
 <%@ taglib uri="http://java.sun.com/jsf/core" prefix="f"%>
-<%@ taglib uri="http://java.sun.com/jsf/html" prefix="h"%>
-<%@ taglib uri="http://myfaces.apache.org/tobago/component" prefix="tc" %>
-<%@ taglib uri="http://myfaces.apache.org/tobago/extension" prefix="tx" %>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Device List</title>
-</head>
+<%@ page contentType="text/html;charset=UTF-8" language="java"%>
+<%@ taglib tagdir="/WEB-INF/tags/layout" prefix="layout"%>
+<%@ taglib uri="http://myfaces.apache.org/tobago/extension" prefix="tx"%>
 <f:view>
-<body>
-	<h:form>
-	</h:form>
-</body>
+	<f:facet name="reload">
+		<tc:reload frequency="5000" />
+	</f:facet>
+
+	<tc:loadBundle basename="webapp" var="appBundle" />
+	<tc:page>
+
+		<tc:box label="#{appBundle.listDevices_boxTitle}">
+			<f:facet name="layout">
+				<tc:gridLayout border="0" />
+			</f:facet>
+			<tc:panel>
+				<f:facet name="layout">
+					<tc:gridLayout columns="1*;1*" />
+				</f:facet>
+
+				<tc:button action="adddevice" label="#{appBundle.listDevices_gotoAddDevice}" />
+			</tc:panel>
+		</tc:box>
+	</tc:page>
 </f:view>
-</html>
