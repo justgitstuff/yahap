@@ -9,7 +9,7 @@
 <entry key="notTranslated">Sorry, not completely translated yet.</entry>
 <entry key="pageTitle">Tobago Demo</entry>
 
-<!-- Devices -->
+<!-- Add Devices -->
 
   <entry key="addDevice_boxTitle">Add a New Device</entry>
   <entry key="addDevice_buttonAction">Add Device</entry>
@@ -29,6 +29,11 @@
   <entry key="addDeviceConfirm_boxTitle">Confirm New Device</entry>
   <entry key="addDeviceConfirm_confirm">Confirm and Add</entry>
   <entry key="addDeviceConfirm_revise">Edit Device</entry>
+  
+<!-- List Devices -->
+  <entry key="listDevices_gotoAddDevice">Add Device</entry>
+  <entry key="listDevices_boxTitle">List Devices</entry>
+  
 
 <!-- location list -->
   <entry key="location_itemUnknown">none</entry>
