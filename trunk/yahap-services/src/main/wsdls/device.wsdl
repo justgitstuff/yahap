@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:dev="http://ohalloran.net.au/device/"
+	xmlns:common="http://ohalloran.net.au/yahap/common"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="device"
+	targetNamespace="http://ohalloran.net.au/device/">
+
+	<!-- import common types -->
+	<wsdl:types>
+		<xsd:schema elementFormDefault="qualified" version="1.0.0.0">
+			<xsd:import namespace="http://ohalloran.net.au/yahap/common"
+				schemaLocation="yahap-common.xsd" />
+		</xsd:schema>
+
+		<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+			targetNamespace="http://ohalloran.net.au/device/">
+			<xsd:import schemaLocation="yahap-common.xsd"
+				namespace="http://ohalloran.net.au/yahap/common">
+			</xsd:import>
+
+			<xsd:complexType name="NewDeviceRequestType">
+				<xsd:sequence>
+					<xsd:element name="Device"
+						type="common:DeviceType">
+					</xsd:element>
+					<xsd:element name="Code"
+						type="common:DeviceCodeType">
+					</xsd:element>
+					<xsd:element name="Location"
+						type="common:LocationType">
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+
+			<xsd:complexType name="NewDeviceResponseType">
+				<xsd:sequence>
+					<xsd:element name="device"
+						type="common:DeviceType" maxOccurs="unbounded">
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+
+			<xsd:element name="NewDeviceRequest"
+				type="dev:NewDeviceRequestType">
+			</xsd:element>
+
+			<xsd:element name="NewDeviceResponse"
+				type="dev:NewDeviceResponseType">
+			</xsd:element>
+
+
+			<xsd:element name="DeviceBaseException"
+				type="common:BaseExceptionType">
+			</xsd:element>
+
+			<xsd:complexType name="GetDevicesRequestType">
+				<xsd:sequence>
+					<xsd:element name="id" type="xsd:int"></xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+
+			<xsd:complexType name="GetDevicesResponseType">
+				<xsd:sequence>
+					<xsd:element name="Devices" type="common:DeviceType"></xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+
+			<xsd:element name="GetDevicesRequest"
+				type="dev:GetDevicesRequestType">
+			</xsd:element>
+
+			<xsd:element name="GetDevicesResponse"
+				type="dev:GetDevicesResponseType">
+			</xsd:element>
+		</xsd:schema>
+	</wsdl:types>
+
+	<!-- message definitions -->
+	<wsdl:message name="NewDeviceRequest">
+		<wsdl:part element="dev:NewDeviceRequest" name="parameters" />
+	</wsdl:message>
+	<wsdl:message name="NewDeviceResponse">
+		<wsdl:part element="dev:NewDeviceResponse" name="parameters" />
+	</wsdl:message>
+
+	<!-- device interfaces -->
+	<wsdl:message name="AddDevice_faultMsg">
+		<wsdl:part name="parameters"
+			element="dev:DeviceBaseException">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="GetDevicesRequest">
+		<wsdl:part name="parameters" element="dev:GetDevicesRequest"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="GetDevicesResponse">
+		<wsdl:part name="parameters" element="dev:GetDevicesResponse"></wsdl:part>
+	</wsdl:message>
+	<wsdl:portType name="DevicePortType">
+		<wsdl:operation name="AddDevice">
+			<wsdl:input message="dev:NewDeviceRequest" />
+			<wsdl:output message="dev:NewDeviceResponse" />
+			<wsdl:fault name="fault" message="dev:AddDevice_faultMsg"></wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="GetDevices">
+			<wsdl:input message="dev:GetDevicesRequest"></wsdl:input>
+			<wsdl:output message="dev:GetDevicesResponse"></wsdl:output>
+		</wsdl:operation>
+	</wsdl:portType>
+
+	<!-- http/soap binding -->
+	<wsdl:binding name="DeviceServicePortSoapBinding"
+		type="dev:DevicePortType">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="GetDevices">
+			<soap:operation
+				soapAction="http://ohalloran.net.au/device/NewDevice" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+
+	<!-- service location -->
+	<wsdl:service name="DeviceService">
+		<wsdl:port binding="dev:DeviceServicePortSoapBinding"
+			name="DeviceServicePort">
+			<soap:address location="http://localhost:8080/" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>
