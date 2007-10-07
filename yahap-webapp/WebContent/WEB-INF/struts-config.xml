@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="logonForm" type="app.LogonForm"/>
+	</form-beans>
+	<action-mappings>
+		<action path="/welcome" forward="/pages/index.jsp"/>
+		<action path="/login" name="LoginForm"
+			scope="request" validate="true" input="/pages/login.jsp"
+			type="au.net.ohalloran."
+		/>
+<!-- 
+		<action path="/locationtreefunctions" 
+			type="com.openjawtech.location.LocationTreeFunctions" 
+			name="logonForm" 
+			scope="request" 
+			validate="false" 
+			input="/pages/.jsp">
+			<forward name="success" path="/pages/Welcome.jsp"/>
+			<forward name="failure" path="/pages/Logon.jsp" />
+		</action>
+		<action path="/Logoff" type="app.LogoffAction">
+			<forward name="success" path="/pages/Logoff.jsp"/>
+		</action>
+ -->
+	</action-mappings>
+	<message-resources parameter="resources.application"/>
+</struts-config>
