@@ -1,0 +1,1 @@
+A non-ambitious home automation project with an easy to use web gui. Exposing platform agnostic web services to control the system. Initially using java, tomcat, jsf and axis to control webcams and x-10 devices
